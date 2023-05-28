@@ -1,0 +1,5 @@
+<form [formGroup]="productForm" (ngSubmit)="onHandleSubmit()">
+    <input class="me-2" type="text" formControlName="name">
+    <input type="number" formControlName="price">
+    <button type="submit" [disabled]="!productForm.valid">Submit</button>
+</form>
