@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Stt</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Hanh Dong</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="products && products.length">
+            <tr *ngFor="let product of products; index as i">
+                <td>{{i + 1}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>
+                    <button type="submit" class="btn btn-danger me-1" (click)="RemoveItem(product.id)">Remove</button>
+                    <a routerLink="/productEdit/{{product.id}}" class="btn btn-primary">Update</a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
