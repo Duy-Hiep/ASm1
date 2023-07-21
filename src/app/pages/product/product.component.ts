@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IProduct } from 'src/app/interfaces/product';
+import { IProduct } from 'src/app/interface/product';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -8,16 +8,17 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-  products: IProduct[] = []
-  constructor(private productService:ProductService){}
+  products: IProduct[] = [];
+
+  constructor(private productService: ProductService){}
 
   ngOnInit(){
-    this.productService.getProduct().subscribe((data) => {
+    this.productService.getProduct().subscribe(data => {
       this.products = data
     })
   }
 
-  RemoveItem(id: any){
+  removeItem(id: any){
     this.productService.removeProduct(id).subscribe(() => {
       this.products = this.products.filter(item => item.id !== id)
     })

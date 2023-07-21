@@ -14,9 +14,8 @@
                 <td>{{product.name}}</td>
                 <td>{{product.price}}</td>
                 <td>
-                    <button type="submit" class="btn btn-danger me-1" (click)="RemoveItem(product.id)">Remove</button>
+                    <button class="btn btn-danger me-2" (click)="removeItem(product.id)">Remove</button>
                     <a routerLink="/productEdit/{{product.id}}" class="btn btn-primary">Update</a>
-
                 </td>
             </tr>
         </tbody>

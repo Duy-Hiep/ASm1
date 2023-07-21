@@ -1,11 +1,13 @@
 <form [formGroup]="productForm" (ngSubmit)="onHandleSubmit()">
     <div class="mb-3">
-        <input type="text" formControlName="name" class="form-control" placeholder="Ten san pham">
-        
+      <label for="exampleInputEmail1" class="form-label">Name Product</label>
+      <input type="text" class="form-control" formControlName="name" >
+      
     </div>
     <div class="mb-3">
-        <input type="number" formControlName="price" class="form-control" placeholder="Gia san pham">
-
+      <label for="exampleInputPassword1" class="form-label">Price Product</label>
+      <input type="number" class="form-control" formControlName="price">
     </div>
-    <button type="submit" class="btn btn-primary">Update product</button>
-</form>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

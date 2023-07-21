@@ -1,21 +1,19 @@
 {
   "products": [
     {
-      "name": "San pham new1",
-      "price": 500,
-      "img": "https://picsum.photos/200/200",
-      "id": 2
-    },
-    {
-      "name": "San pham new2",
-      "price": 500,
-      "img": "https://picsum.photos/200/200",
-      "id": 3
+      "id": 3,
+      "name": "San pham new2 update",
+      "price": 500
     },
     {
       "id": 4,
       "name": "Product new2",
-      "price": 500
+      "price": 2003
+    },
+    {
+      "id": 5,
+      "name": "product new3",
+      "price": 78910
     }
   ]
 }

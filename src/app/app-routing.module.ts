@@ -6,11 +6,11 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { ProductAddComponent } from './pages/product-add/product-add.component';
 
 const routes: Routes = [
-  {path: '', component: AdminLayoutComponent, children: [
-    {path:'', redirectTo: "product", pathMatch:"full"},
-    {path: 'product',component: ProductComponent },
-    {path: 'productAdd',component: ProductAddComponent },
-    {path: 'productEdit/:id',component: ProductEditComponent }
+  {path: '', component: AdminLayoutComponent, children:[
+    {path: '', redirectTo:"product", pathMatch: 'full'},
+    {path: 'product', component: ProductComponent},
+    {path: 'productAdd', component: ProductAddComponent},
+    {path: 'productEdit/:id', component: ProductEditComponent},
   ]}
 ];
 
